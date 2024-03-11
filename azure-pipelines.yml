@@ -104,16 +104,6 @@ extends:
             condition: succeededOrFailed()
             targetPath: '$(Build.SourcesDirectory)\logs'
             artifactName: Logs
-          - output: pipelineArtifact
-            displayName: 'Publish build artifact: TestData'
-            targetPath: '$(Build.ArtifactStagingDirectory)/TestDataFolder/TestData.zip'
-            sbomBuildDropPath: '$(Build.ArtifactStagingDirectory)/TestDataFolder'
-            artifactName: 'TestData'
-          - output: pipelineArtifact
-            displayName: 'Publish build artifact: RunSettings'
-            targetPath: '$(Build.SourcesDirectory)/Python/Tests/TestData/default.runsettings'
-            sbomBuildDropPath: '$(Build.SourcesDirectory)/Python/Tests/TestData'
-            artifactName: 'RunSettings'
           - ${{ if notin(variables['Build.Reason'], 'PullRequest') }}:
             - output: pipelineArtifact
               displayName: 'Publish build artifact: BoM'
