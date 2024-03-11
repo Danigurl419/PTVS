@@ -161,6 +161,3 @@ extends:
           displayName: 'Execute cleanup tasks'
           condition: succeededOrFailed()
 
-        # Publish test data
-        - template: /Build/templates/publish_test_data.yml@self
-
