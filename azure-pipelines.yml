@@ -110,9 +110,9 @@ extends:
               targetPath: '$(Build.BinariesDirectory)\layout'
               artifactName: SBOM
             - output: pipelineArtifact
-              displayName: 'Publish build artifact: release'
-              targetPath: '$(Build.StagingDirectory)\release'
-              artifactName: Release
+              displayName: 'Publish build artifact: Vsix'
+              targetPath: '$(Build.BinariesDirectory)\raw\setup'
+              artifactName: Vsix
 
         steps:
 
