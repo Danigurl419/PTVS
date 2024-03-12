@@ -109,6 +109,10 @@ extends:
               displayName: 'Publish build artifact: BoM'
               targetPath: '$(Build.BinariesDirectory)\layout'
               artifactName: SBOM
+            - output: pipelineArtifact
+              displayName: 'Publish build artifact: release'
+              targetPath: '$(Build.StagingDirectory)\release'
+              artifactName: Release
 
         steps:
 
